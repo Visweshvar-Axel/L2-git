@@ -1,0 +1,133 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\UST\live\m2>git init L2-git
+Initialized empty Git repository in D:/UST/live/m2/L2-git/.git/
+
+D:\UST\live\m2>cd L2
+The system cannot find the path specified.
+
+D:\UST\live\m2>cd L2-git
+
+D:\UST\live\m2\L2-git>code .
+
+D:\UST\live\m2\L2-git>code .
+
+D:\UST\live\m2\L2-git>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+D:\UST\live\m2\L2-git>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+D:\UST\live\m2\L2-git>git add .
+
+D:\UST\live\m2\L2-git>git commit -m "+index"
+[master (root-commit) 1dc5875] +index
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+
+D:\UST\live\m2\L2-git>git branch -M main
+
+D:\UST\live\m2\L2-git>git remote add origin https://github.com/Visweshvar-Axel/L2-git.git
+
+D:\UST\live\m2\L2-git>git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Visweshvar-Axel/L2-git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\UST\live\m2\L2-git>git branch
+* main
+
+D:\UST\live\m2\L2-git>git checkout -b button
+Switched to a new branch 'button'
+
+D:\UST\live\m2\L2-git>git checkout main
+Switched to branch 'main'
+M       index.html
+Your branch is up to date with 'origin/main'.
+
+D:\UST\live\m2\L2-git>git checkout button
+Switched to branch 'button'
+M       index.html
+
+D:\UST\live\m2\L2-git>git status
+On branch button
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\UST\live\m2\L2-git>git commit -m "_button"
+On branch button
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\UST\live\m2\L2-git>git add .
+
+D:\UST\live\m2\L2-git>git commit -m "_button"
+[button b407f14] _button
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\UST\live\m2\L2-git>git hist
+* b407f14 (HEAD -> button) _button
+* 1dc5875 (origin/main, main) +index
+
+D:\UST\live\m2\L2-git>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\UST\live\m2\L2-git>git merge button
+Updating 1dc5875..b407f14
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\UST\live\m2\L2-git>git show
+commit b407f146d8a47a4255e205db8bb584a8ea5c3fca (HEAD -> main, button)
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:10:12 2024 +0530
+
+    _button
+
+diff --git a/index.html b/index.html
+index 7b5d739..5933da1 100644
+--- a/index.html
++++ b/index.html
+@@ -6,6 +6,6 @@
+     <title>index</title>
+ </head>
+ <body>
+-
++    <button>submit</button>
+ </body>
+ </html>
+\ No newline at end of file
+
+D:\UST\live\m2\L2-git>git commit -m "merge main"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
