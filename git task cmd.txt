@@ -1,0 +1,365 @@
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ ls
+commands.txt  index.html
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ ls -al
+total 13
+drwxr-xr-x 1 VISWA 197609    0 Apr 30 18:20 ./
+drwxr-xr-x 1 VISWA 197609    0 Apr 30 18:13 ../
+drwxr-xr-x 1 VISWA 197609    0 Apr 30 18:20 .git/
+-rw-r--r-- 1 VISWA 197609 3834 Apr 30 18:20 commands.txt
+-rw-r--r-- 1 VISWA 197609  235 Apr 30 18:11 index.html
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ touch README.md
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add .
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git commit -m "+readme"
+[main 08203a8] +readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ mkdir src
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ cd src
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ toush level1.txt
+bash: toush: command not found
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ touch level1.txt
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ echo > level2.txt
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ echo "git new file" > level2.txt
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ echo "git new file3" > level3.txt
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git/src (main)
+$ cd ..
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add src
+warning: in the working copy of 'src/level2.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/level3.txt', LF will be replaced by CRLF the next time Git touches it
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+        new file:   src/level3.txt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$  git deff
+git: 'deff' is not a git command. See 'git --help'.
+
+The most similar command is
+        diff
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$  git diff
+warning: in the working copy of 'src/level3.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/src/level3.txt b/src/level3.txt
+index 553bf5d..a5b760c 100644
+--- a/src/level3.txt
++++ b/src/level3.txt
+@@ -1 +1 @@
+-git new file3
++git new
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add .
+warning: in the working copy of 'src/level3.txt', LF will be replaced by CRLF the next time Git touches it
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+        new file:   src/level3.txt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$  git diff
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$  git diff
+diff --git a/src/level3.txt b/src/level3.txt
+deleted file mode 100644
+index a5b760c..0000000
+--- a/src/level3.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-git new
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+        new file:   src/level3.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    src/level3.txt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add .
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/new.tcxt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add .
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+        new file:   src/new.tcxt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/level1.txt
+        new file:   src/level2.txt
+        new file:   src/new.tcxt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/new.tcxt
+
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git add .
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git commit -m "text commit"
+[main c00e7fd] text commit
+ 3 files changed, 6 insertions(+)
+ create mode 100644 src/level1.txt
+ create mode 100644 src/level2.txt
+ create mode 100644 src/new.tcxt
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git log
+commit c00e7fd3b71ad298207216aff73533ed51fae0ac (HEAD -> main)
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:33:02 2024 +0530
+
+    text commit
+
+commit 08203a8aa5302b9ca5963a3dc3cbd629303b7ca5
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:24:22 2024 +0530
+
+    +readme
+
+commit 6da45bdf9aa88c3365f14840036b36e96106d5eb (origin/main)
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:20:43 2024 +0530
+
+    +cmd
+
+commit b407f146d8a47a4255e205db8bb584a8ea5c3fca (button)
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:10:12 2024 +0530
+
+    _button
+
+commit 1dc58751a6034504315779ce1d79e46221cfdd4a
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:06:17 2024 +0530
+
+    +index
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git log --oneline
+c00e7fd (HEAD -> main) text commit
+08203a8 +readme
+6da45bd (origin/main) +cmd
+b407f14 (button) _button
+1dc5875 +index
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git show 6da45bd
+commit 6da45bdf9aa88c3365f14840036b36e96106d5eb (origin/main)
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:20:43 2024 +0530
+
+    +cmd
+
+diff --git a/commands.txt b/commands.txt
+new file mode 100644
+index 0000000..dcb3610
+--- /dev/null
++++ b/commands.txt
+@@ -0,0 +1,133 @@
++Microsoft Windows [Version 10.0.22631.3447]
++(c) Microsoft Corporation. All rights reserved.
++
++D:\UST\live\m2>git init L2-git
++Initialized empty Git repository in D:/UST/live/m2/L2-git/.git/
++
++D:\UST\live\m2>cd L2
++The system cannot find the path specified.
++
++D:\UST\live\m2>cd L2-git
++
++D:\UST\live\m2\L2-git>code .
++
++D:\UST\live\m2\L2-git>code .
++
++D:\UST\live\m2\L2-git>git status
++On branch master
++
++No commits yet
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        index.html
++
++nothing added to commit but untracked files present (use "git add" to track)
++D:\UST\live\m2\L2-git>git add
++Nothing specified, nothing added.
++hint: Maybe you wanted to say 'git add .'?
++hint: Turn this message off by running
++hint: "git config advice.addEmptyPathspec false"
++
++D:\UST\live\m2\L2-git>git add .
++
++D:\UST\live\m2\L2-git>git commit -m "+index"
++[master (root-commit) 1dc5875] +index
++ 1 file changed, 11 insertions(+)
++ create mode 100644 index.html
++
++D:\UST\live\m2\L2-git>git branch -M main
++
++D:\UST\live\m2\L2-git>git remote add origin https://github.com/Visweshvar-Axel/L2-git.git
++
++D:\UST\live\m2\L2-git>git push -u origin main
++Enumerating objects: 3, done.
+
+VISWA@VISWA MINGW64 /d/UST/live/m2/L2-git (main)
+$ git show 08203a8
+commit 08203a8aa5302b9ca5963a3dc3cbd629303b7ca5
+Author: Visweshvar-Axel <118894317+Visweshvar-Axel@users.noreply.github.com>
+Date:   Tue Apr 30 18:24:22 2024 +0530
+
+    +readme
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e69de29
